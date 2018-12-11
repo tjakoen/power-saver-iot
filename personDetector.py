@@ -50,12 +50,11 @@ while True:
         for i in range(size):
             if temperature[i] > omron.roomTemp or temperature[i] > 35:
                 hits+=1
-    if hits > 1:
-        print 'Human Detected'
-        GPIO.output(pinLightOut, GPIO.LOW)
-	startTimer()
-    elif motionOccured:
-        print 'Motion Occured'
+    if motionOccured or hits > 1:
+        if motionOccured:
+            print 'Motion Occured'
+        elif hits > 1:
+            print 'Human Detected'
         GPIO.output(pinLightOut, GPIO.LOW)
 	startTimer()
     else:

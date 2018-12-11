@@ -2,7 +2,7 @@
 
 pigpiod pwd
 
-python /home/pi/Desktop/omrond6t/personDetector.py
+python /home/pi/Desktop/power-saver-iot/personDetector.py
 
 $SHELL
 
